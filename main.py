@@ -24,7 +24,7 @@ driver.get("https://my.uscis.gov/appointmentscheduler-appointment/ca/en/office-s
 driver.maximize_window()
 
 zip = driver.find_element(By.ID, "zip-input")
-zip.send_keys("99102") #98168seattle #99102spokane
+zip.send_keys("98168") #98168seattle #99102spokane
 WebDriverWait(driver, 20).until(EC.element_to_be_clickable((By.ID, "field_office_query"))).click()
 
 driver.implicitly_wait(5)
