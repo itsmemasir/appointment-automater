@@ -3,9 +3,6 @@ name: run main.py
 on:
   schedule:
     - cron: '0 */1 * * *' # At every hour
-  push:
-    branches:
-      - main
   workflow_dispatch:
 
 jobs:
