@@ -5,9 +5,15 @@ from webdriver_manager.chrome import ChromeDriverManager
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support import expected_conditions as EC
+import os
 
 import requests
 
+try:
+    SOME_SECRET = os.environ["SOME_SECRET"]
+except KeyError:
+    SOME_SECRET = "Token not available!"
+    
 options = webdriver.ChromeOptions()
 options.add_argument('headless')
 options.add_experimental_option("detach", True)         #leaves the browser open after completing a request (it closes by default)
