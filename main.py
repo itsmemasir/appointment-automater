@@ -41,8 +41,8 @@ try:
 
 except:
     element = driver.find_element(By.ID, "no-available-appts").get_attribute("innerHTML")
-    result = "nothing yet"
-    print("error in finding appt status")
+    result = element
+    print("result")
 
 if "Appointment" in result:
     email_sender = "theflashvszoom28@gmail.com"
